@@ -13,21 +13,11 @@
       {
         "1": "package:english_words/english_words.dart",
         "5": false
-      },
-      {
-        "1": "package:startup_namer/local_storage_service.dart",
-        "5": false
       }
     ],
     "5": [
       {
         "1": "AppComponent",
-        "5": [
-          {
-            "1": "LocalStorageService",
-            "4": "_localStorageService"
-          }
-        ],
         "6": [
           "OnInit"
         ],
@@ -56,28 +46,7 @@
         "prefix": null,
         "isHost": false,
         "value": null,
-        "diDeps": [
-          {
-            "token": {
-              "value": null,
-              "identifier": {
-                "class": "Identifier",
-                "name": "LocalStorageService",
-                "moduleUrl": null,
-                "prefix": null,
-                "value": null
-              },
-              "identifierIsInstance": false
-            },
-            "value": null,
-            "isAttribute": false,
-            "isSelf": false,
-            "isHost": false,
-            "isSkipSelf": false,
-            "isOptional": false,
-            "isValue": false
-          }
-        ]
+        "diDeps": []
       },
       "changeDetection": 6,
       "inputs": {},
@@ -91,7 +60,7 @@
       ],
       "template": {
         "encapsulation": 0,
-        "template": "<material-button (trigger)=\"generateNames()\">\n  <glyph icon=\"lightbulb_outline\"></glyph>\n  Get new ideas\n</material-button>\n\n<material-list>\n  <div group>\n    <material-list-item *ngFor=\"let item of names\"\n                        (trigger)=\"toggleSavedState(item)\"\n                        [class.is-saved]=\"savedNames.contains(item)\">\n      <span class=\"first\">{{item.first}}</span>{{item.second}}.com\n    </material-list-item>\n  </div>\n  <div group>\n    <div label>Saved names</div>\n    <material-list-item *ngFor=\"let item of savedNames\"\n                        (trigger)=\"removeFromSaved(item)\">\n      <span class=\"first\">{{item.first}}</span>{{item.second}}.com\n    </material-list-item>\n  </div>\n</material-list>\n",
+        "template": "<material-button (trigger)=\"generateNames()\">\r\n  <glyph icon=\"lightbulb_outline\"></glyph>\r\n  Nápady?\r\n</material-button>\r\n\r\n<material-list>\r\n  <div group>\r\n    <material-list-item *ngFor=\"let item of names\"\r\n                        (trigger)=\"toggleSavedState(item)\"\r\n                        [class.is-saved]=\"savedNames.contains(item)\">\r\n      <span class=\"first\">{{item.first}}</span>{{item.second}}.com\r\n    </material-list-item>\r\n  </div>\r\n  <div group>\r\n    <div label>Saved names</div>\r\n    <material-list-item *ngFor=\"let item of savedNames\"\r\n                        (trigger)=\"removeFromSaved(item)\">\r\n      <span class=\"first\">{{item.first}}</span>{{item.second}}.com\r\n    </material-list-item>\r\n  </div>\r\n</material-list>\r\n",
         "templateUrl": "asset:startup_namer/lib/app_component.html",
         "styles": [],
         "styleUrls": [
@@ -103,13 +72,6 @@
         {
           "class": "Identifier",
           "name": "materialProviders",
-          "moduleUrl": null,
-          "prefix": null,
-          "value": null
-        },
-        {
-          "class": "Identifier",
-          "name": "LocalStorageService",
           "moduleUrl": null,
           "prefix": null,
           "value": null
